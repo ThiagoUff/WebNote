@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebNote.Api", "WebNote.Api\WebNote.Api.csproj", "{BC6C0341-F922-4414-B40F-A7482D5717F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebNote.Services", "WebNote.Services\WebNote.Services.csproj", "{6247CE0B-DD50-4DF2-BE34-46A52216381B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebNote.Domain", "WebNote.Domain\WebNote.Domain.csproj", "{BEFE2F71-64C4-4C01-AB7A-377AA30CEF63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebNote.Infra", "WebNote.Infra\WebNote.Infra.csproj", "{8FD80615-3578-428E-BC45-2BF17E718D9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC6C0341-F922-4414-B40F-A7482D5717F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6C0341-F922-4414-B40F-A7482D5717F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6C0341-F922-4414-B40F-A7482D5717F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6C0341-F922-4414-B40F-A7482D5717F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6247CE0B-DD50-4DF2-BE34-46A52216381B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6247CE0B-DD50-4DF2-BE34-46A52216381B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6247CE0B-DD50-4DF2-BE34-46A52216381B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6247CE0B-DD50-4DF2-BE34-46A52216381B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEFE2F71-64C4-4C01-AB7A-377AA30CEF63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFE2F71-64C4-4C01-AB7A-377AA30CEF63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFE2F71-64C4-4C01-AB7A-377AA30CEF63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFE2F71-64C4-4C01-AB7A-377AA30CEF63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FD80615-3578-428E-BC45-2BF17E718D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD80615-3578-428E-BC45-2BF17E718D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD80615-3578-428E-BC45-2BF17E718D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD80615-3578-428E-BC45-2BF17E718D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02A0CCA5-CFA9-4A11-8A4A-9E9A4597C39A}
+	EndGlobalSection
+EndGlobal
