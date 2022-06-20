@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using WebNote.Domain.Interfaces.Aws;
 using WebNote.Domain.Interfaces.Mapper;
 using WebNote.Domain.Interfaces.Repository;
 using WebNote.Domain.Interfaces.Services;
+using WebNote.Infra.Aws;
 using WebNote.Infra.Repository;
 using WebNote.Services.Mapper;
 using WebNote.Services.Services;
@@ -23,8 +25,10 @@ namespace WebNote.Api.Configuration
             //Repositories
             services.AddScoped<INotesRepository, NotesRepository>();
 
-            //services.AddScoped<IJwtUtils, JwtUtils>();
+            //Aws
+            services.AddScoped<IAwsClient, AwsClient>();
 
+            //services.AddScoped<IJwtUtils, JwtUtils>();
             services.AddSingleton<IConfiguration>(configuration);
         }
 

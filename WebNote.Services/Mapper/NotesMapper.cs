@@ -6,13 +6,13 @@ namespace WebNote.Services.Mapper
 {
     public class NotesMapper : INotesMapper
     {
-        public Notes Convert(CreateNoteRequest request)
+        public Notes Convert(CreateNoteRequest request, string content)
         {
             return new Notes()
             {
                 Id = System.Convert.ToBase64String((Guid.NewGuid()).ToByteArray()),
                 IsPublic = request.IsPublic,
-                Post = request.Post,
+                Post = content,
                 PostedOn = DateTime.UtcNow,
                 Username = request.Username,
             };
