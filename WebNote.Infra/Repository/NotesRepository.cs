@@ -18,7 +18,7 @@ namespace WebNote.Infra.Repository
                 notesDatabaseSettings.Value.DatabaseName);
 
             _NotesCollection = mongoDatabase.GetCollection<Notes>(
-                notesDatabaseSettings.Value.BooksCollectionName);
+                notesDatabaseSettings.Value.NotesCollectionName);
         }
         public async Task<List<Notes>> GetAsync() =>
         await _NotesCollection.Find(_ => true).ToListAsync();

@@ -1,11 +1,13 @@
 using Microsoft.OpenApi.Models;
 using WebNote.Api.Configuration;
+using WebNote.Domain.Repository.Logs;
 using WebNote.Domain.Repository.Notes;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.Configure<NotesDatabaseSettings>(
-builder.Configuration.GetSection("NotesDatabase"));
+builder.Services.Configure<NotesDatabaseSettings>(builder.Configuration.GetSection("NotesDatabase"));
+builder.Services.Configure<LogsDatabaseSettings>(builder.Configuration.GetSection("LogsDatabase"));
+
 
 builder.Services.AddControllers();
 

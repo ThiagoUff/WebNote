@@ -5,6 +5,6 @@ namespace WebNote.Domain.Interfaces.Mapper
 {
     public interface INotesMapper
     {
-        Notes Convert(CreateNoteRequest request, string content);
+        Notes Convert(CreateNoteRequest request, string content, bool isHateSpeech);
     }
 }

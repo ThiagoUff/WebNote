@@ -6,7 +6,7 @@ namespace WebNote.Services.Mapper
 {
     public class NotesMapper : INotesMapper
     {
-        public Notes Convert(CreateNoteRequest request, string content)
+        public Notes Convert(CreateNoteRequest request, string content, bool isHateSpeech)
         {
             return new Notes()
             {
@@ -15,6 +15,7 @@ namespace WebNote.Services.Mapper
                 Post = content,
                 PostedOn = DateTime.UtcNow,
                 Username = request.Username,
+                IsHateSpeech = isHateSpeech
             };
         }
     }

@@ -24,7 +24,8 @@ namespace WebNote.Api.Configuration
 
             //Repositories
             services.AddScoped<INotesRepository, NotesRepository>();
-
+            services.AddScoped<ILogsRepository, LogsRepository>();
+            
             //Aws
             services.AddScoped<IAwsClient, AwsClient>();
 

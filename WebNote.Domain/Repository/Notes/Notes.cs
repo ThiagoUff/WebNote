@@ -6,7 +6,8 @@
         public string Username { get; set; } = null!;
         public string Post { get; set; } = null!;
         public DateTime PostedOn { get; set; }
-        public bool IsPublic { get; set; } 
+        public bool IsPublic { get; set; }
+        public bool IsHateSpeech { get; set; }
     }
 
 }
