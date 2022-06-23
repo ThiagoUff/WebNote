@@ -52,22 +52,21 @@ namespace WebNote.Infra.Aws
             return serilizer.Deserialize<AwsResponse<UnCompressorResponse>>(reader);
         }
 
-        public async Task<bool> HasHateSpeech(string note)
+        public async Task<AwsResponse<HateSpeechResponse>> HasHateSpeech(HateSpeechRequest note)
         {
             InvokeRequest ir = new InvokeRequest
             {
-                FunctionName = "hateSpeechMl",
+                FunctionName = "hate_speech_ml",
                 InvocationType = InvocationType.RequestResponse,
                 Payload = JsonConvert.SerializeObject(note)
             };
 
             InvokeResponse response = await _client.InvokeAsync(ir);
-
             var sr = new StreamReader(response.Payload);
             JsonReader reader = new JsonTextReader(sr);
 
             var serilizer = new JsonSerializer();
-            return serilizer.Deserialize<bool>(reader);
+            return serilizer.Deserialize<AwsResponse<HateSpeechResponse>>(reader);
         }
 
         public async Task<AwsResponse<string>?> LogFormatter(LogRequest log)
