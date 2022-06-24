@@ -52,7 +52,7 @@ namespace WebNote.Infra.Aws
             return serilizer.Deserialize<AwsResponse<UnCompressorResponse>>(reader);
         }
 
-        public async Task<AwsResponse<HateSpeechResponse>> HasHateSpeech(HateSpeechRequest note)
+        public async Task<AwsResponse<string>?> HasHateSpeech(HateSpeechRequest note)
         {
             InvokeRequest ir = new InvokeRequest
             {
@@ -66,7 +66,7 @@ namespace WebNote.Infra.Aws
             JsonReader reader = new JsonTextReader(sr);
 
             var serilizer = new JsonSerializer();
-            return serilizer.Deserialize<AwsResponse<HateSpeechResponse>>(reader);
+            return serilizer.Deserialize<AwsResponse<string>>(reader);
         }
 
         public async Task<AwsResponse<string>?> LogFormatter(LogRequest log)

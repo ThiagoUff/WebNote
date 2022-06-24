@@ -30,7 +30,8 @@ namespace WebNote.Services.Services
 
         public async Task CreateNote(CreateNoteRequest request)
         {
-            bool isHateSpeech = Convert.ToBoolean(Convert.ToInt16(await _awsClient.HasHateSpeech(new HateSpeechRequest() { Text = request.Post })));
+            var hateSpeechResponseBody = (await _awsClient.HasHateSpeech(new HateSpeechRequest() { Text = request.Post }))!.Body!;
+            bool isHateSpeech = hateSpeechResponseBody == "0.0" ? false : true;
             AwsResponse<CompressorResponse>? content = await _awsClient.Compress(new CompressorRequest() { Text = request.Post });
             if (content is null || content.Body is null)
                 await _logsRepository.CreateAsync(new Logs()
