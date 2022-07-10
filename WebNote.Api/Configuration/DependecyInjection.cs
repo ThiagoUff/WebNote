@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Refit;
 using System.Text;
-using WebNote.Domain.Interfaces.Aws;
 using WebNote.Domain.Interfaces.Mapper;
 using WebNote.Domain.Interfaces.Repository;
 using WebNote.Domain.Interfaces.Services;
-using WebNote.Infra.Aws;
+using WebNote.Infra.Integration;
 using WebNote.Infra.Repository;
 using WebNote.Services.Mapper;
 using WebNote.Services.Services;
@@ -26,8 +26,10 @@ namespace WebNote.Api.Configuration
             services.AddScoped<INotesRepository, NotesRepository>();
             services.AddScoped<ILogsRepository, LogsRepository>();
             
-            //Aws
-            services.AddScoped<IAwsClient, AwsClient>();
+            //Integration            
+            services.AddRefitClient<IFunctions>()
+                                    .ConfigureHttpClient(c => c.BaseAddress = new Uri(configuration["ApiGateway:Functions"]));
+            
 
             //services.AddScoped<IJwtUtils, JwtUtils>();
             services.AddSingleton<IConfiguration>(configuration);

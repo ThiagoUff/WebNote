@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace WebNote.Domain.Aws.Request
+namespace WebNote.Domain.Integration.Functions.Request
 {
-    public class CompressorRequest
+    public class DeCompressorRequest
     {
         [JsonProperty("text")]
         public string Text { get; set; } = null!;

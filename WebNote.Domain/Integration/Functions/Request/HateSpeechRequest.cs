@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace WebNote.Domain.Aws.Request
+namespace WebNote.Domain.Integration.Functions.Request
 {
     public class HateSpeechRequest
     {

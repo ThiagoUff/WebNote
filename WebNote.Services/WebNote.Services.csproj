@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebNote.Domain\WebNote.Domain.csproj" />
+    <ProjectReference Include="..\WebNote.Infra\WebNote.Infra.csproj" />
   </ItemGroup>
 
 </Project>

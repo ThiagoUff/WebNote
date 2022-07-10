@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace WebNote.Domain.Aws.Response
+namespace WebNote.Domain.Integration.Functions.Response
 {
-    public class UnCompressorResponse
+    public class CompressorResponse
     {
         [JsonProperty("mensagem_encriptada")]
         public string Response { get; set; } = null!;

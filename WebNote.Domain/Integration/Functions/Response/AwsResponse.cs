@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace WebNote.Domain.Aws.Response
+namespace WebNote.Domain.Integration.Functions.Response
 {
     public class AwsResponse<T>
     {
