@@ -17,12 +17,13 @@ namespace WebNote.Api.Controllers
         public NotesController(INotesServices notesServices)
         {
             _notesServices = notesServices;
+
         }
       
         [HttpPost]
         public async Task<ActionResult> CreateNote([FromBody] CreateNoteRequest request)
         {
-            await _notesServices.CreateNote(request);
+            await _notesServices.ProcessNote(request);
             return CreatedAtAction(nameof(CreateNote), new { Username = request.Username }, request);
         }
         [HttpGet("username/{username}")]

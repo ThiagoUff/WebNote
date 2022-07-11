@@ -18,6 +18,7 @@ namespace WebNote.Api.Configuration
         {
             //Services
             services.AddScoped<INotesServices, NotesServices>();
+            services.AddScoped<IJobsServices, JobsServices>();
 
             //Mapper
             services.AddScoped<INotesMapper, NotesMapper>();

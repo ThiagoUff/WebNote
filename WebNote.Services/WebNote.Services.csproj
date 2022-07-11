@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.SQS" Version="3.7.2.74" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WebNote.Domain\WebNote.Domain.csproj" />
     <ProjectReference Include="..\WebNote.Infra\WebNote.Infra.csproj" />
   </ItemGroup>
